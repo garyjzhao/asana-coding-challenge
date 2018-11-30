@@ -1,11 +1,18 @@
 import React from "react";
+import styled from "styled-components";
+
+const GlobalFooter = styled.footer`
+  color: var(--color);
+  font-family: var(--font-serif);
+  text-align: center;
+`;
 
 class Footer extends React.Component {
   render() {
     return (
-      <footer class="global-footer">
+      <GlobalFooter>
         <p>Built by a wonderful developer for Asana.</p>
-      </footer>
+      </GlobalFooter>
     );
   }
 }
