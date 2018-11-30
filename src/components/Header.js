@@ -11,14 +11,29 @@ const NavigationBar = styled.div`
   }
 `;
 
+const GlobalHeader = styled.div`
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+
+  /* Header Quote */
+  .header-quote {
+    color: var(--color);
+    font-family: var(--font-serif);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 460px;
+  }
+`;
+
 class Header extends React.Component {
   render() {
     return (
       <>
         <NavigationBar role="navigation">
-          <img src={logo} />
+          <img src={logo} alt="Asana Logo" />
         </NavigationBar>
-        <header class="global-header" role="banner">
+        <GlobalHeader role="banner">
           <h1>Puppy image gallery</h1>
 
           <blockquote class="header-quote">
@@ -29,7 +44,7 @@ class Header extends React.Component {
 
             <cite>&mdash;Robert Wagner</cite>
           </blockquote>
-        </header>
+        </GlobalHeader>
       </>
     );
   }

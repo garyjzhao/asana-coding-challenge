@@ -14,6 +14,10 @@ const Wrapper = styled.div`
   font-family: var(--font-sans);
   font-weight: normal;
   line-height: 1.5;
+
+  a {
+    color: var(--color-link);
+  }
 `;
 
 const CSSVariables = styled.div`
