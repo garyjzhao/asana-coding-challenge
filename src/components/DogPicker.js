@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Box = styled.div`
+const ImageLink = styled.a`
   width: 250px;
   height: 250px;
   background-color: #ccc;
@@ -9,17 +9,32 @@ const Box = styled.div`
   justify-content: center;
   align-content: center;
   margin-bottom: 16px;
+  cursor: pointer;
   img {
     width: 100%;
   }
 `;
 
 class DogPicker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isClicked: false,
+      isOpen: false
+    };
+    this.test = this.test.bind(this);
+  }
+
+  test() {
+    this.setState({ isClicked: !this.state.isClicked });
+    alert(this.state.isClicked);
+  }
+
   render() {
     return (
-      <Box>
-        <img src={this.props.image} alt="test" />
-      </Box>
+      <ImageLink onClick={this.test}>
+        <img src={this.props.thumbnail} alt="Dog Thumbnail" />
+      </ImageLink>
     );
   }
 }

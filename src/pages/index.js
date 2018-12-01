@@ -5,19 +5,27 @@ import Layout from "../components/layout";
 
 const IndexPage = ({ data }) => (
   <Layout>
-    {data.allDataJson.edges[0].node.dogs.map(data => (
-      <DogPicker image={data.image} />
+    {data.allFile.edges.map(data => (
+      <DogPicker
+        thumbnail={data.node.childImageSharp.resize.src}
+        // fullImage={data.node.childImageSharp.orignial.src}
+      />
     ))}
   </Layout>
 );
 
 export const query = graphql`
   query {
-    allDataJson {
+    allFile(filter: { extension: { eq: "jpeg" } }) {
       edges {
         node {
-          dogs {
-            image
+          childImageSharp {
+            resize(width: 250, height: 250, cropFocus: CENTER) {
+              src
+            }
+            original {
+              src
+            }
           }
         }
       }
