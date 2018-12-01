@@ -8,13 +8,17 @@ const Box = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-bottom: 16px;
+  img {
+    width: 100%;
+  }
 `;
 
 class DogPicker extends React.Component {
   render() {
     return (
       <Box>
-        <p>words</p>
+        <img src={this.props.image} alt="test" />
       </Box>
     );
   }
