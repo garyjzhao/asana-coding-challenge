@@ -7,8 +7,9 @@ const IndexPage = ({ data }) => (
   <Layout>
     {data.allFile.edges.map(data => (
       <DogPicker
+        key={data.node.childImageSharp.id}
         thumbnail={data.node.childImageSharp.resize.src}
-        // fullImage={data.node.childImageSharp.orignial.src}
+        fullImage={data.node.childImageSharp.fluid.src}
       />
     ))}
   </Layout>
@@ -20,10 +21,11 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
+            id
             resize(width: 250, height: 250, cropFocus: CENTER) {
               src
             }
-            original {
+            fluid(maxWidth: 800) {
               src
             }
           }
