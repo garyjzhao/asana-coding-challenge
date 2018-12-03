@@ -39,7 +39,7 @@ class Header extends React.Component {
         <GlobalHeader role="banner">
           <h1>Puppy image gallery</h1>
 
-          <blockquote class="header-quote">
+          <blockquote className="header-quote">
             <p>
               A dog will teach you unconditional love. If you can have that in
               your life, things won't be too bad.
