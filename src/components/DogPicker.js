@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Lightbox from "./Lightbox";
 
 const ImageLink = styled.a`
   width: 250px;
@@ -19,22 +20,31 @@ class DogPicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isClicked: false,
       isOpen: false
     };
-    this.test = this.test.bind(this);
+    this.toggleLightbox = this.toggleLightbox.bind(this);
   }
 
-  test() {
-    this.setState({ isClicked: !this.state.isClicked });
-    alert(this.state.isClicked);
+  toggleLightbox() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
   }
 
   render() {
     return (
-      <ImageLink onClick={this.test}>
-        <img src={this.props.thumbnail} alt="Dog Thumbnail" />
-      </ImageLink>
+      <>
+        <ImageLink onClick={this.toggleLightbox}>
+          <img src={this.props.thumbnail} alt="Dog Thumbnail" />
+        </ImageLink>
+
+        {this.state.isOpen && (
+          <Lightbox
+            toggleLightbox={this.toggleLightbox}
+            fullImage={this.props.fullImage}
+          />
+        )}
+      </>
     );
   }
 }
