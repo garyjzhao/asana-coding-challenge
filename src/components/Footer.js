@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const GlobalFooter = styled.footer`
   color: var(--color);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans-serif);
   text-align: center;
 `;
 
