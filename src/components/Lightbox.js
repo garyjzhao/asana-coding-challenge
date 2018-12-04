@@ -18,21 +18,24 @@ const Overlay = styled.div`
   z-index: 1000;
   .image-wrapper {
     padding: 0 15px;
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-    @media screen and (max-width: 767px) {
-      max-width: 400px;
-      max-height: 500px;
+    ${props =>
+      props.aspectRatio < 1
+        ? "display: flex;justify-content: center;flex-basis: 100%;"
+        : ""}
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
     }
     img {
       height: auto;
-      width: 100%;
       ${props =>
-        props.aspectRatio < 1 ? "max-height: 400px; width: auto;" : ""}
+        props.aspectRatio < 1
+          ? "max-height: 400px; width: auto;"
+          : "max-width: 600px; width: 100%;"}
       @media screen and (min-width: 768px) {
         width: auto;
-        max-height: 500px;
+        max-height: 400px;
       }
     }
   }
