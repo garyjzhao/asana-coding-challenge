@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => (
         aspectRatio={data.node.childImageSharp.fluid.aspectRatio}
         lightboxImage={data.node.childImageSharp.fluid.src}
         original={data.node.childImageSharp.original.src}
-        sizes={data.node.childImageSharp.sizes}
+        thumbnail={data.node.childImageSharp.resize.src}
       />
     ))}
   </Layout>
@@ -34,8 +34,8 @@ export const query = graphql`
             original {
               src
             }
-            sizes {
-              ...GatsbyImageSharpSizes
+            resize(width: 250, height: 250, cropFocus: CENTER) {
+              src
             }
           }
         }

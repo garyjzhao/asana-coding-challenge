@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Lightbox from "./Lightbox";
-import Img from "gatsby-image";
 
 const ImageLink = styled.a`
   width: 250px;
@@ -12,10 +11,6 @@ const ImageLink = styled.a`
   align-content: center;
   margin-bottom: 16px;
   cursor: pointer;
-  img,
-  .gatsby-image-wrapper {
-    width: 100%;
-  }
 `;
 
 class DogPicker extends React.Component {
@@ -37,7 +32,7 @@ class DogPicker extends React.Component {
     return (
       <>
         <ImageLink onClick={this.toggleLightbox}>
-          <Img sizes={this.props.sizes} />
+          <img src={this.props.thumbnail} alt="Thumnbnail of Dog Pictures" />
         </ImageLink>
 
         {this.state.isOpen && (
@@ -45,7 +40,6 @@ class DogPicker extends React.Component {
             toggleLightbox={this.toggleLightbox}
             lightboxImage={this.props.lightboxImage}
             original={this.props.original}
-            sizes={this.props.sizes}
             aspectRatio={this.props.aspectRatio}
           />
         )}
