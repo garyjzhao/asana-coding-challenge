@@ -18,7 +18,9 @@ const Overlay = styled.div`
   z-index: 1000;
   .image-wrapper {
     padding: 0 15px;
-    /* needs flex */
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
     @media screen and (max-width: 767px) {
       max-width: 400px;
       max-height: 500px;
@@ -32,11 +34,6 @@ const Overlay = styled.div`
         width: auto;
         max-height: 500px;
       }
-    }
-    h1 {
-      color: #fff;
-      flex: 0 0 500px;
-      text-align: center;
     }
   }
 `;
@@ -76,7 +73,7 @@ class Lightbox extends React.Component {
       >
         <CloseButton>&times;</CloseButton>
         <div className="image-wrapper">
-          <img src={this.props.fullImage} alt="Dog" />
+          <img src={this.props.lightboxImage} alt="Dog" />
         </div>
         <DownloadButton href={this.props.original} target="_blank">
           Click to download full sized image

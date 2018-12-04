@@ -43,7 +43,8 @@ class DogPicker extends React.Component {
         {this.state.isOpen && (
           <Lightbox
             toggleLightbox={this.toggleLightbox}
-            fullImage={this.props.fullImage}
+            lightboxImage={this.props.lightboxImage}
+            original={this.props.original}
             sizes={this.props.sizes}
             aspectRatio={this.props.aspectRatio}
           />

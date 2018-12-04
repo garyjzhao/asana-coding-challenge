@@ -9,7 +9,8 @@ const IndexPage = ({ data }) => (
       <DogPicker
         key={data.node.childImageSharp.id}
         aspectRatio={data.node.childImageSharp.fluid.aspectRatio}
-        fullImage={data.node.childImageSharp.fluid.src}
+        lightboxImage={data.node.childImageSharp.fluid.src}
+        original={data.node.childImageSharp.original.src}
         sizes={data.node.childImageSharp.sizes}
       />
     ))}
