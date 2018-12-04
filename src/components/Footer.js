@@ -11,7 +11,17 @@ class Footer extends React.Component {
   render() {
     return (
       <GlobalFooter>
-        <p>Built by a wonderful developer for Asana.</p>
+        <p>
+          Built by{" "}
+          <a
+            href="http://www.garyzhao.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            a wonderful developer
+          </a>{" "}
+          for Asana.
+        </p>
       </GlobalFooter>
     );
   }
