@@ -5,6 +5,7 @@ const GlobalFooter = styled.footer`
   color: var(--color);
   font-family: var(--font-sans-serif);
   text-align: center;
+  padding: 0 16px;
 `;
 
 class Footer extends React.Component {

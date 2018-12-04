@@ -15,8 +15,7 @@ const NavigationBar = styled.div`
 `;
 
 const GlobalHeader = styled.div`
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
 
   /* Header Quote */
