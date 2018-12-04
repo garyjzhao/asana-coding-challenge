@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 import "./basic.css";
 
@@ -36,11 +37,14 @@ const Wrapper = styled.div`
 `;
 
 const Layout = ({ children }) => (
-  <CSSVariables theme={theme}>
-    <Header />
-    <Wrapper>{children}</Wrapper>
-    <Footer />
-  </CSSVariables>
+  <>
+    <Helmet title="Asana — Pet Adoption Agency" />
+    <CSSVariables theme={theme}>
+      <Header />
+      <Wrapper>{children}</Wrapper>
+      <Footer />
+    </CSSVariables>
+  </>
 );
 
 export default Layout;
