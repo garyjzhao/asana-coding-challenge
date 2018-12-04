@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "gary-zhao-asana-colding-challenge",
+  "description": "Gary Zhao's Asana Coding Challenge",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
