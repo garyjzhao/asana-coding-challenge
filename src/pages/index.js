@@ -8,8 +8,9 @@ const IndexPage = ({ data }) => (
     {data.allFile.edges.map(data => (
       <DogPicker
         key={data.node.childImageSharp.id}
-        thumbnail={data.node.childImageSharp.resize.src}
+        aspectRatio={data.node.childImageSharp.fluid.aspectRatio}
         fullImage={data.node.childImageSharp.fluid.src}
+        sizes={data.node.childImageSharp.sizes}
       />
     ))}
   </Layout>
@@ -17,16 +18,23 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    allFile(filter: { extension: { eq: "jpeg" } }) {
+    allFile(
+      filter: { relativeDirectory: { eq: "images/raw" } }
+      sort: { order: ASC, fields: name }
+    ) {
       edges {
         node {
           childImageSharp {
             id
-            resize(width: 250, height: 250, cropFocus: CENTER) {
+            fluid {
+              src
+              aspectRatio
+            }
+            original {
               src
             }
-            fluid(maxWidth: 800) {
-              src
+            sizes {
+              ...GatsbyImageSharpSizes
             }
           }
         }

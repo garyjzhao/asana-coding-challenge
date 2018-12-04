@@ -14,8 +14,23 @@ const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  img {
-    max-height: 500px;
+  z-index: 1000;
+  .image-wrapper {
+    padding: 0 15px;
+    @media screen and (max-width: 767px) {
+      max-width: 400px;
+      max-height: 500px;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      ${props =>
+        props.aspectRatio < 1 ? "max-height: 400px; width: auto;" : ""}
+      @media screen and (min-width: 768px) {
+        width: auto;
+        max-height: 500px;
+      }
+    }
   }
 `;
 const CloseButton = styled.div`
@@ -31,9 +46,14 @@ const CloseButton = styled.div`
 class Lightbox extends React.Component {
   render() {
     return (
-      <Overlay onClick={this.props.toggleLightbox}>
+      <Overlay
+        onClick={this.props.toggleLightbox}
+        aspectRatio={this.props.aspectRatio}
+      >
         <CloseButton>&times;</CloseButton>
-        <img src={this.props.fullImage} alt="Dog" />
+        <div class="image-wrapper">
+          <img src={this.props.fullImage} alt="Dog" />
+        </div>
       </Overlay>
     );
   }
