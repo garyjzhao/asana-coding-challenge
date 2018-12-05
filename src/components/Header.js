@@ -36,7 +36,7 @@ class Header extends React.Component {
           <img src={logo} alt="Asana Logo" />
         </NavigationBar>
         <GlobalHeader role="banner">
-          <h1>Puppy image gallery</h1>
+          <h1>Adopt a puppy today with Asana!</h1>
 
           <blockquote className="header-quote">
             <p>
