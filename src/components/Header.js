@@ -17,14 +17,21 @@ const NavigationBar = styled.div`
 const GlobalHeader = styled.div`
   padding: 2rem 1rem;
   text-align: center;
-
-  /* Header Quote */
+  h1 {
+    /* font-size: 40px; */
+    font-size: calc(33.75px + 11.25 * ((100vw - 480px) / 800));
+    font-weight: normal;
+  }
   .header-quote {
-    color: var(--color);
-    font-family: var(--font-serif);
-    margin-left: auto;
-    margin-right: auto;
+    color: var(--color-secondary);
+    font-family: var(--font-sans-serif);
     max-width: 460px;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: left;
+    @media screen and (min-width: 768px) {
+      font-size: 22px;
+    }
   }
 `;
 
@@ -41,7 +48,7 @@ class Header extends React.Component {
           <blockquote className="header-quote">
             <p>
               A dog will teach you unconditional love. If you can have that in
-              your life, things won't be too bad.
+              your life, things won't be too&nbsp;bad.
             </p>
 
             <cite>&mdash;Robert Wagner</cite>
