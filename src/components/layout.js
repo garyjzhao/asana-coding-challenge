@@ -33,9 +33,9 @@ const Wrapper = styled.div`
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around; */
 `;
 
 const Layout = ({ children }) => (
