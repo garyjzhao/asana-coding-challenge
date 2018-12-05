@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet";
 
 import "./basic.css";
+import favicon from "../images/favicon.png";
 
 const theme = {
   serif: "Georgia, serif",
@@ -38,7 +39,16 @@ const Wrapper = styled.div`
 
 const Layout = ({ children }) => (
   <>
-    <Helmet title="Asana — Pet Adoption Agency" />
+    <Helmet
+      htmlAttributes={{ lang: "en", amp: "" }}
+      link={[{ rel: "shortcut icon", type: "image/png", href: `${favicon}` }]}
+    >
+      <title>Asana — Pet Adoption Agency</title>
+      <meta
+        name="description"
+        content="Adopt your new puppy today with Asana's new pet adoption."
+      />
+    </Helmet>
     <CSSVariables theme={theme}>
       <Header />
       <Wrapper>{children}</Wrapper>
