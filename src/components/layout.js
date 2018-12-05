@@ -33,9 +33,21 @@ const Wrapper = styled.div`
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; */
+  display: -ms-grid;
+  -ms-grid-columns: 250px;
+  -ms-grid-rows: 250px;
+  display: grid;
+  grid-template: 250px / 250px;
+  grid-gap: 15px;
+  justify-content: center;
+  @media screen and (min-width: 516px) {
+    -ms-grid-columns: 250px 15px 250px;
+    grid-template-columns: 250px 250px;
+  }
+  @media screen and (min-width: 768px) {
+    -ms-grid-columns: 250px 15px 250px 15px 250px;
+    grid-template-columns: 250px 250px 250px;
+  }
 `;
 
 const Layout = ({ children }) => (
