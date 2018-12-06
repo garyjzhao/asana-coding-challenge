@@ -1,10 +1,13 @@
-# [Gary Zhao's](https://github.com/garyjzhao) Submission for Asana WebDev Take-Home Exercise
+# Gary Zhao's Submission for Asana WebDev Take-Home Exercise
 
-My focus of choice was Design.
+Hi! 👋🏼
+This is my submission for the [Asana's Web Development Take-Home Exercise](https://github.com/Asana/webdev-take-home-exercise). My focus of choice was Design.
 
 Technology I used:
 
 - [Gatsby](https://www.gatsbyjs.org/)
 - [Styled Components](https://www.styled-components.com/)
 
-Thanks for stopping by!
+If there is any questions, please feel free to reach out to me.
+
+Thanks for stopping by! 🙏🏼
