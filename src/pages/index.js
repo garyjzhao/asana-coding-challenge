@@ -13,6 +13,7 @@ const HeaderQuote = styled.div`
   .header-quote {
     color: var(--color-secondary);
     font-family: var(--font-sans-serif);
+    font-weight: 400;
     max-width: 460px;
     margin: 0 auto;
     font-size: 16px;
