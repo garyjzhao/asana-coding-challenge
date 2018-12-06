@@ -11,7 +11,7 @@ import favicon from "../images/favicon.png";
 const theme = {
   serif: "Georgia, serif",
   sansSerif: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-  colorSecondary: "#333",
+  colorSecondary: "#646f79",
   colorLink: "#635ac7"
 };
 const CSSVariables = styled.div`
