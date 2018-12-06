@@ -60,6 +60,7 @@ class DogPicker extends React.Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
+    document.querySelector("body").classList.toggle("doNotScroll");
   }
 
   render() {

@@ -18,8 +18,10 @@ const NotFoundPageWrapper = styled.div`
 const NotFoundPage = () => (
   <Layout>
     <NotFoundPageWrapper>
-      <img src={ruhoh} alt="Ruh-oh, you hit a page that doesn't exist" />
-      <Link to="/">Let's go home.</Link>
+      <Link to="/">
+        <img src={ruhoh} alt="Ruh-oh, you hit a page that doesn't exist" />
+        Let's go home.
+      </Link>
     </NotFoundPageWrapper>
   </Layout>
 );

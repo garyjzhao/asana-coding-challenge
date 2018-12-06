@@ -12,12 +12,14 @@ const Overlay = styled.div`
   left: 0;
   right: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   .image-wrapper {
     padding: 0 15px;
+    margin-bottom: 36px;
+    max-height: 400px;
     ${props =>
       props.aspectRatio < 1
         ? "display: flex;justify-content: center;flex-basis: 100%;"
@@ -28,6 +30,7 @@ const Overlay = styled.div`
       flex-basis: 100%;
     }
     img {
+      display: block;
       height: auto;
       ${props =>
         props.aspectRatio < 1
