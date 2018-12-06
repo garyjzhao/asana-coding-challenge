@@ -9,7 +9,6 @@ const ImageLink = styled.a`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 16px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
