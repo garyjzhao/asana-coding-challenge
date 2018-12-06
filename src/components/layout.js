@@ -1,8 +1,9 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
+import styled from "styled-components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import styled from "styled-components";
-import { Helmet } from "react-helmet";
 
 import "./basic.css";
 import favicon from "../images/favicon.png";

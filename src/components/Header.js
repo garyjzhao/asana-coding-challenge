@@ -14,47 +14,12 @@ const NavigationBar = styled.div`
   }
 `;
 
-const GlobalHeader = styled.div`
-  padding: 2rem 1rem;
-  text-align: center;
-  h1 {
-    /* font-size: 40px; */
-    font-size: calc(33.75px + 11.25 * ((100vw - 480px) / 800));
-    font-weight: normal;
-  }
-  .header-quote {
-    color: var(--color-secondary);
-    font-family: var(--font-sans-serif);
-    max-width: 460px;
-    margin: 0 auto;
-    font-size: 16px;
-    text-align: left;
-    @media screen and (min-width: 768px) {
-      font-size: 22px;
-    }
-  }
-`;
-
 class Header extends React.Component {
   render() {
     return (
-      <>
-        <NavigationBar role="navigation">
-          <img src={logo} alt="Asana Logo" />
-        </NavigationBar>
-        <GlobalHeader role="banner">
-          <h1>Adopt a puppy today with Asana!</h1>
-
-          <blockquote className="header-quote">
-            <p>
-              A dog will teach you unconditional love. If you can have that in
-              your life, things won't be too&nbsp;bad.
-            </p>
-
-            <cite>&mdash;Robert Wagner</cite>
-          </blockquote>
-        </GlobalHeader>
-      </>
+      <NavigationBar role="navigation">
+        <img src={logo} alt="Asana Logo" />
+      </NavigationBar>
     );
   }
 }
