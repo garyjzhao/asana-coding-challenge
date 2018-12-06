@@ -2,17 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const GlobalFooter = styled.footer`
-  color: var(--color);
-  background-color: var(--footer);
+  color: var(--color-link);
   font-family: var(--font-sans-serif);
   text-align: center;
   padding: 16px;
   a {
     color: var(--color-link);
     text-decoration: none;
-    &:hover {
-      border-bottom: 2px solid var(--color-link);
-    }
+    border-bottom: 2px solid var(--color-link);
   }
 `;
 

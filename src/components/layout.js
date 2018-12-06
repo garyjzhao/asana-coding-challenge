@@ -12,15 +12,13 @@ const theme = {
   serif: "Georgia, serif",
   sansSerif: '"Helvetica Neue", Helvetica, Arial, sans-serif',
   color: "#646f79",
-  colorLink: "#fff",
-  footerColor: "#222b37"
+  colorLink: "#000"
 };
 const CSSVariables = styled.div`
   --font-serif: ${props => props.theme.serif};
   --font-sans: ${props => props.theme.sansSerif};
   --color: ${props => props.theme.color};
   --color-link: ${props => props.theme.colorLink};
-  --footer: ${props => props.theme.footerColor};
 
   font-family: var(--font-sans);
   font-weight: normal;
