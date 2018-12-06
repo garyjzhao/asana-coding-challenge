@@ -6,14 +6,12 @@ import { Link } from "gatsby";
 import ruhoh from "../images/404.jpg";
 
 const NotFoundPageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   width: 420px;
-  padding: 15px;
+  margin: 15px auto;
+  text-align: center;
   img {
     width: 100%;
-    padding: 15px 0;
+    margin: 15px 0;
   }
 `;
 
