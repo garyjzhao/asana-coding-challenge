@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/asana-coding-challenge",
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
