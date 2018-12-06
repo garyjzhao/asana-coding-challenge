@@ -11,7 +11,7 @@ const HeaderQuote = styled.div`
     font-weight: normal;
   }
   .header-quote {
-    color: var(--color-secondary);
+    color: var(--color);
     font-family: var(--font-sans-serif);
     font-weight: 400;
     max-width: 460px;

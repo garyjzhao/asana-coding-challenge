@@ -11,22 +11,20 @@ import favicon from "../images/favicon.png";
 const theme = {
   serif: "Georgia, serif",
   sansSerif: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-  colorSecondary: "#646f79",
-  colorLink: "#635ac7"
+  color: "#646f79",
+  colorLink: "#fff",
+  footerColor: "#222b37"
 };
 const CSSVariables = styled.div`
   --font-serif: ${props => props.theme.serif};
   --font-sans: ${props => props.theme.sansSerif};
-  --color-secondary: ${props => props.theme.colorSecondary};
+  --color: ${props => props.theme.color};
   --color-link: ${props => props.theme.colorLink};
+  --footer: ${props => props.theme.footerColor};
 
   font-family: var(--font-sans);
   font-weight: normal;
   line-height: 1.5;
-
-  a {
-    color: var(--color-link);
-  }
 `;
 
 const Layout = ({ children }) => (

@@ -79,7 +79,7 @@ class Lightbox extends React.Component {
       >
         <CloseButton>&times;</CloseButton>
         <div className="image-wrapper">
-          <img src={this.props.lightboxImage} alt="Dog" />
+          <img src={this.props.lightboxImage} alt="Dog! Click below to download full size." />
         </div>
         <DownloadButton href={this.props.original} target="_blank">
           Click to download full sized image
