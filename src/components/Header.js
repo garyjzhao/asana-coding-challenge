@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
+
 import logo from "../images/asana.png";
 
 const NavigationBar = styled.div`
@@ -18,7 +20,9 @@ class Header extends React.Component {
   render() {
     return (
       <NavigationBar role="navigation">
-        <img src={logo} alt="Asana Logo" />
+        <Link to="/">
+          <img src={logo} alt="Asana Logo" />
+        </Link>
       </NavigationBar>
     );
   }
