@@ -3,6 +3,8 @@
 Hi! 👋🏼
 This is my submission for the [Asana's Web Development Take-Home Exercise](https://github.com/Asana/webdev-take-home-exercise). My focus of choice was Design.
 
+Please see the functional website here: http://www.garyzhao.com/asana-coding-challenge/
+
 Technology I used:
 
 - [Gatsby](https://www.gatsbyjs.org/)
