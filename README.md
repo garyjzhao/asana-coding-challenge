@@ -1,12 +1,8 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# [Gary Zhao's](https://github.com/garyjzhao) Submission for Asana WebDev Take-Home Exercise
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+Technology I used:
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+- [Gatsby](https://www.gatsbyjs.org/)
+- [Styled Components](https://www.styled-components.com/)
 
-## Running in development
-`gatsby develop`
+Thanks for stopping by!
