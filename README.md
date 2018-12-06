@@ -13,5 +13,3 @@ Technology I used:
 If there is any questions, please feel free to reach out to me.
 
 Thanks for stopping by! 🙏🏼
-
-test
